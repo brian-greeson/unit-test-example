@@ -1,5 +1,5 @@
 # Zephyr Application Unit Tests Example
-This respository is intended to show how to create a simple unit test for zephyr application code. It is a modified version of the zephyr applicaiton example found [here](https://github.com/zephyrproject-rtos/example-application).
+This respository is intended to show how to create a simple unit test for zephyr application code. The application is a modified version of the zephyr applicaiton example found [here](https://github.com/zephyrproject-rtos/example-application).
 
 The application provides unit tests examples of:
 - Basic Application code
