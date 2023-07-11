@@ -4,7 +4,6 @@
  */
 
 #include <zephyr/kernel.h>
-#include <zephyr/drivers/sensor.h>
 #include <app_version.h>
 
 #include <zephyr/logging/log.h>

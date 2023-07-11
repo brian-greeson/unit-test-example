@@ -1,0 +1,5 @@
+tests:
+  unit_tests.mytest:
+    tags: okay
+    type: unit
+    # platform_allow: native_posix
