@@ -4,7 +4,7 @@ This respository is intended to show how to create a simple unit test for zephyr
 The application provides unit tests examples of:
 - Basic Application code
 - TODO: Application code that interacts with Zephyr subsystem
-- TODO: Mocking Cal
+- TODO: Mocking example
 
 ## Getting Started
 Follow the Zephyr getting started guide to configure your zephyr on your system.
