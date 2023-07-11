@@ -7,5 +7,11 @@ find_package(Zephyr COMPONENTS unittest REQUIRED HINTS $ENV{ZEPHYR_BASE})
 
 project(unit-tests)
 
+target_include_directories(testbinary PRIVATE ../../app/src/include)
+
+
 FILE(GLOB app_sources src/*.c)
-target_sources(testbinary PRIVATE ${app_sources})
+target_sources(testbinary PRIVATE 
+${app_sources}
+../../app/src/my_custom_code.c
+)

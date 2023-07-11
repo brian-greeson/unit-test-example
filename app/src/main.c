@@ -4,44 +4,17 @@
  */
 
 #include <zephyr/kernel.h>
-#include <app_version.h>
-
-#include <zephyr/logging/log.h>
-LOG_MODULE_REGISTER(main, CONFIG_APP_LOG_LEVEL);
+#include "my_custom_code.h"
 
 int main(void)
 {
-	int ret;
-	const struct device *sensor;
-
-	printk("Zephyr Example Application %s\n", APP_VERSION_STRING);
-
-	sensor = DEVICE_DT_GET(DT_NODELABEL(examplesensor0));
-	if (!device_is_ready(sensor)) {
-		LOG_ERR("Sensor not ready");
-		return 0;
+	int a = 100;
+	a = a + 1;
+	while (1)
+	{
+		k_sleep(K_SECONDS(2));
+		do_something();
+		k_sleep(K_SECONDS(2));
+		do_something_else();
 	}
-
-	while (1) {
-		struct sensor_value val;
-
-		ret = sensor_sample_fetch(sensor);
-		if (ret < 0) {
-			LOG_ERR("Could not fetch sample (%d)", ret);
-			return 0;
-		}
-
-		ret = sensor_channel_get(sensor, SENSOR_CHAN_PROX, &val);
-		if (ret < 0) {
-			LOG_ERR("Could not get sample (%d)", ret);
-			return 0;
-		}
-
-		printk("Sensor value: %d\n", val.val1);
-
-		k_sleep(K_MSEC(1000));
-	}
-
-	return 0;
 }
-
