@@ -26,6 +26,10 @@ west update
 ### Running tests
 To run the tests use zephyr's test runner **Twister**.
 ```shell
-west twister -v -c -T tests/unit/
+cd unit-test-example
+west twister -vv -i -c -T tests/unit/
 ```
-
+Quick note on twister extensions used:
+- -vv enables verbose output.
+- -i overwrites the output directory, otherwise you end up with a lot of `twister.out.#` folders.
+- -T specifiy the tests to run, without twister would run **all** of zephyrs tests.
