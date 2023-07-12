@@ -13,5 +13,6 @@ target_include_directories(testbinary PRIVATE ../../app/src/include)
 FILE(GLOB app_sources src/*.c)
 target_sources(testbinary PRIVATE 
 ${app_sources}
+../../app/src/my_custom_code.c
 ../../app/src/my_custom_application_code.c
 )

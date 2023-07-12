@@ -5,6 +5,7 @@
 
 #include <zephyr/kernel.h>
 #include "my_custom_code.h"
+#include "my_custom_application_code.h"
 
 int main(void)
 {
@@ -13,8 +14,9 @@ int main(void)
 	while (1)
 	{
 		k_sleep(K_SECONDS(2));
-		do_something();
+		add_100();
+		add_200();
 		k_sleep(K_SECONDS(2));
-		do_something_else();
+		log_time();
 	}
 }

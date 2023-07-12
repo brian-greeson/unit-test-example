@@ -1,15 +1,15 @@
 #include <zephyr/logging/log.h>
 #include "my_custom_code.h"
-LOG_MODULE_REGISTER(things, LOG_LEVEL_DBG);
+LOG_MODULE_REGISTER(basicLog, LOG_LEVEL_DBG);
 
 static int a = 0;
 
-void do_something()
+void log_100()
 {
   LOG_DBG("%d\n", a);
 }
 
-int do_something_else()
+int add_100()
 {
   a = a + 100;
   return a;

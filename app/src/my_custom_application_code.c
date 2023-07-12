@@ -2,18 +2,18 @@
 
 #include <zephyr/logging/log.h>
 #include "my_custom_code.h"
-LOG_MODULE_REGISTER(things, LOG_LEVEL_DBG);
+LOG_MODULE_REGISTER(applicationLog, LOG_LEVEL_DBG);
 
 static int a = 0;
 
-void do_something()
+void log_time()
 {
   uint64_t timeNow = k_uptime_get();
   LOG_DBG("%lld\n", timeNow);
 }
 
-int do_something_else()
+int add_200()
 {
-  a = a + 100;
+  a = a + 200;
   return a;
 }

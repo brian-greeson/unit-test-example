@@ -7,7 +7,7 @@ FAKE_VOID_FUNC(z_log_minimal_printk);
 
 ZTEST(unit_tests, test_mytest)
 {
-  int result = do_something_else();
+  int result = add_100();
   zassert_equal(result, 100, "Expected 100, got: %d", result);
 }
 

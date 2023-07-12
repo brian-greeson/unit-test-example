@@ -15,4 +15,6 @@ zephyr_include_directories(
 
 target_sources(app PRIVATE 
 src/main.c
-src/my_custom_code.c)
+src/my_custom_code.c
+src/my_custom_application_code.c
+)
